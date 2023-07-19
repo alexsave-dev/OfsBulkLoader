@@ -59,7 +59,7 @@ After you are done with xlsx, go to the command prompt in the directory OfsBulkL
 # Results and Logs
 After the execution is over you can check the directory **./log** for a log file.
 
-The processed OFS file wil be in the directory **./ofs/archive** if the flag **POST.TO.TRANSACT=YES** in the spresheet. Otherwise the file will be in the directory **./ofs**.
+The processed OFS file wil be in the directory **./ofs/archive** if the flag **POST.TO.TRANSACT=YES** in the spreadsheet. Otherwise the file will be in the directory **./ofs**.
 
 # Settings
 There are two fles with settings for the solution. 
