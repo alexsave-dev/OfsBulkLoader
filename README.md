@@ -1,142 +1,73 @@
-# Welcome to StackEdit!
+﻿# About the solution
+The OFS Bulk Loader soluton easily allows generate and post bulk OFS messages into Temenos Transact™/T24™, hereinafter **Transact**.  All OFS settings and details are defined in XLSX file of specific format. Once XLSX file is defined OFS messages can be posted to Transact by running *one and only command* in the command prompt. The solution is compliant with Transact OFS module, ready for use, easy to install, and easy to maintain. It can be effectively used for Transact data migration projects and for massive postings to Transact by means of OFS. Please leave your comments, bug reports and cooperation proposals on alexsave@gmail.com. You can also follow the author on https://www.linkedin.com/in/alexander-savelyev-b8875111/
+# Technical Notes
+The solution has two jar files. **Util_OfsBulkLoader.jar** is deployed on Transact websever, the **OfsBulkLoader.jar** has to be run from the command prompt by the user. Jar files from the pack have been compiled on Java version 1.8.0_301. The solution has been tested on Transact R21 on Windows. All directories mentioned below have to be available for read/write to both jar files. TSA.SERVICE>TSM has to be up and running to allow OFS messages to be posted into Transact.
 
-Hi! I'm your first Markdown file in **StackEdit**. If you want to learn about StackEdit, you can read me. If you want to play with Markdown, you can edit me. Once you have finished with me, you can create new files by opening the **file explorer** on the left corner of the navigation bar.
+# Installation
+Deploy the **Util_OfsBulkLoader.jar** on your web server. For example for jBoss the jar file can be copied to the directory with local jars as following:
+The resource-root path should be added to module.xml file as following:
+Please restart jBoss afterwards. Please contact your administrator in case of any difficulties. Please follow relevant deployment instructions if you have the webserver of a different provider.  
+Create following three records in Transact:
+Unzip the file ... into the directory UD. You should get the picture like this:
+Important note: All settings are already done to run the solution in the directory UD without any extra modificaton. If you decide to copy the pack to different location then please change settings. Settings will be described in the relevant section below.
+That's it. You can construct and post your first OFS to Transact!
 
-# Files
+# Data Preparation
+All instrustion below are given taking into assumption that the solution  is present in the directory OfsBulkLoader in UD. All below mentioned directories have the relevant path from OfsBulkLoader. 
 
-StackEdit stores your files in your browser, which means all your files are automatically saved locally and are accessible **offline!**
+Open the excel file in the directory **./source/test.xlsx**. The file is given as an example. Please feel free to copy and modify it according to your requirements. The spreadsheet **"OFS"** contains OFS message details (highlighted in green) and other user level settings (highlighted in orange) to control the solution. Mandatory fiels are highlighted in red. You'll find explanations and hints in comments to fields on the spreadsheet.
 
-## Create files and folders
+Go to the the spreadsheet **"DATA"** to prepare ID values as well as field values to be posted as a part of OFS messages.  
 
-The file explorer is accessible using the button in left corner of the navigation bar. You can create a new file by clicking the **New file** button in the file explorer. You can also create folders by clicking the **New folder** button.
+# Execution
+After you are done with xlsx, go to the command prompt in the directory OfsBulkLoader and run the following command to process the xlsx file above: **java -jar ./OfsBulkLoader.jar ./source/test.xlsx**
 
-## Switch to another file
+# Results and Logs
+After the execution is over you can check the directory ./log for a log file.
 
-All your files and folders are presented as a tree in the file explorer. You can switch from one to another by clicking a file in the tree.
+The processed OFS file wil be in the directory ./ofs/archive if the flag POST.TO.TRANSACT=YES in the spresheet. Otherwise the file will be in the directory ./ofs
 
-## Rename a file
+# Settings
+There are two fles with settings for the solution. The file **Transact_OfsBulkLoader.properties** has to be always placed in the directory UD. The file keeps following default settings for Transact part of the solution:
+|Setting  |Default Value  |Description  |
+|--|--|--|
+|OFS.FILE.PATH|./OfsBulkLoader/ofs/ofs|The path to the ofs file to be processed by Transact if it's required|
+|LOG.FILE.PATH|./OfsBulkLoader/log/log|The path to the log file|
+|OFS.ARCHIVE.DIR|./OfsBulkLoader/ofs/archive|The path to the archive directory for log files|
+|DELIMITER|^|The technical delimiter used in the ofs file as a separator. **Please don't modify it until you start use ^ as the value in OFS messages**|
 
-You can rename the current file by clicking the file name in the navigation bar or by clicking the **Rename** button in the file explorer.
+The file **OfsBulkLoader.properties** has to be always placed in the same directory with OfsBulkLoader.jar. The file keeps following default settings for OfsBulkLoader.jar execution:
+|Setting  |Default Value  |Description  |
+|--|--|--|
+|OFS.FILE.PATH|./ofs/ofs|The path to the ofs file to be processed by Transact if it's required|
+|LOG.FILE.PATH|./log/log|The path to the log file|
+|OFS.ARCHIVE.DIR|./ofs/archive|The path to the archive directory for ofs files|
+|LOG.ARCHIVE.DIR|./log/archive|The path to the archive directory for log files|
+|DBTOOLS.USER|DBtools_user|The DBTools username. **Important: please change it to your real DBTools username**|
+|DBTOOLS.PASSWORD|DBtools_password|The DBTools username. **Important: please change it to your real DBTools password**|
+|DELIMITER|^|The technical delimiter used in the ofs file as a separator. **Please don't modify it until you start use ^ as the value in OFS messages**|
+|CHECK.AGENT.SECONDS.DEFAULT|10|The interval in seconds to check whether the TSA service to post OFS messages into Transact is still running. It can be overriden user interval defined in the spreadsheet.|
+|TSA.SERVICE|BNK/OFS.BULK.LOADER|The name of dedicated TSA.SERVICE to post OFS messages in Transact|
+# Disclaimer
+The following disclaimer outlines the terms and conditions governing the use of our solution. By using our solution, you acknowledge and agree to the terms stated below:
 
-## Delete a file
+1.  Limited Responsibility: Our company shall not be held responsible for any damage, loss, or liability incurred by the client's systems or data arising from the use of our solution. We provide the solution on an "as is" basis, without any warranties or guarantees.
+    
+2.  Third-Party Dependencies: Our solution may rely on third-party components, software, or services. We do not guarantee the performance, reliability, or compatibility of these third-party elements, and we shall not be responsible for any issues caused by them.
+    
+3.  User Responsibilities: The client is solely responsible for the proper use, configuration, and maintenance of their systems. It is the client's responsibility to ensure the compatibility of our solution with their existing infrastructure, networks, and software.
+    
+4.  Limitation of Liability: In no event shall our company or its employees, contractors, or affiliates be liable for any indirect, incidental, special, or consequential damages arising from the use of our solution, even if advised of the possibility of such damages.
+    
+5.  Security and Data Protection: While we take reasonable measures to secure our solution, we do not guarantee the absolute security of client systems or data. The client is responsible for implementing appropriate security measures to protect their systems and data.
+    
+6.  Support and Maintenance: Our company may provide support and maintenance services for our solution, but we do not guarantee the availability or timeliness of such services. Any support or maintenance provided is subject to separate agreements and terms.
+    
+7.  Modifications and Updates: We reserve the right to modify, update, or discontinue our solution at any time without prior notice. We shall not be liable for any damages or losses resulting from such modifications or discontinuation.
+    
+8.  Compliance with Laws: The client is responsible for ensuring that their use of our solution complies with all applicable laws, regulations, and industry standards. Our company shall not be liable for any violations or legal issues arising from the client's use of our solution.
 
-You can delete the current file by clicking the **Remove** button in the file explorer. The file will be moved into the **Trash** folder and automatically deleted after 7 days of inactivity.
-
-## Export a file
-
-You can export the current file by clicking **Export to disk** in the menu. You can choose to export the file as plain Markdown, as HTML using a Handlebars template or as a PDF.
-
-
-# Synchronization
-
-Synchronization is one of the biggest features of StackEdit. It enables you to synchronize any file in your workspace with other files stored in your **Google Drive**, your **Dropbox** and your **GitHub** accounts. This allows you to keep writing on other devices, collaborate with people you share the file with, integrate easily into your workflow... The synchronization mechanism takes place every minute in the background, downloading, merging, and uploading file modifications.
-
-There are two types of synchronization and they can complement each other:
-
-- The workspace synchronization will sync all your files, folders and settings automatically. This will allow you to fetch your workspace on any other device.
-	> To start syncing your workspace, just sign in with Google in the menu.
-
-- The file synchronization will keep one file of the workspace synced with one or multiple files in **Google Drive**, **Dropbox** or **GitHub**.
-	> Before starting to sync files, you must link an account in the **Synchronize** sub-menu.
-
-## Open a file
-
-You can open a file from **Google Drive**, **Dropbox** or **GitHub** by opening the **Synchronize** sub-menu and clicking **Open from**. Once opened in the workspace, any modification in the file will be automatically synced.
-
-## Save a file
-
-You can save any file of the workspace to **Google Drive**, **Dropbox** or **GitHub** by opening the **Synchronize** sub-menu and clicking **Save on**. Even if a file in the workspace is already synced, you can save it to another location. StackEdit can sync one file with multiple locations and accounts.
-
-## Synchronize a file
-
-Once your file is linked to a synchronized location, StackEdit will periodically synchronize it by downloading/uploading any modification. A merge will be performed if necessary and conflicts will be resolved.
-
-If you just have modified your file and you want to force syncing, click the **Synchronize now** button in the navigation bar.
-
-> **Note:** The **Synchronize now** button is disabled if you have no file to synchronize.
-
-## Manage file synchronization
-
-Since one file can be synced with multiple locations, you can list and manage synchronized locations by clicking **File synchronization** in the **Synchronize** sub-menu. This allows you to list and remove synchronized locations that are linked to your file.
-
-
-# Publication
-
-Publishing in StackEdit makes it simple for you to publish online your files. Once you're happy with a file, you can publish it to different hosting platforms like **Blogger**, **Dropbox**, **Gist**, **GitHub**, **Google Drive**, **WordPress** and **Zendesk**. With [Handlebars templates](http://handlebarsjs.com/), you have full control over what you export.
-
-> Before starting to publish, you must link an account in the **Publish** sub-menu.
-
-## Publish a File
-
-You can publish your file by opening the **Publish** sub-menu and by clicking **Publish to**. For some locations, you can choose between the following formats:
-
-- Markdown: publish the Markdown text on a website that can interpret it (**GitHub** for instance),
-- HTML: publish the file converted to HTML via a Handlebars template (on a blog for example).
-
-## Update a publication
-
-After publishing, StackEdit keeps your file linked to that publication which makes it easy for you to re-publish it. Once you have modified your file and you want to update your publication, click on the **Publish now** button in the navigation bar.
-
-> **Note:** The **Publish now** button is disabled if your file has not been published yet.
-
-## Manage file publication
-
-Since one file can be published to multiple locations, you can list and manage publish locations by clicking **File publication** in the **Publish** sub-menu. This allows you to list and remove publication locations that are linked to your file.
+By using our solution, you agree to indemnify, defend, and hold harmless our company and its employees, contractors, and affiliates from any claims, liabilities, damages, or expenses arising from your use of our solution in violation of these terms.
 
 
-# Markdown extensions
 
-StackEdit extends the standard Markdown syntax by adding extra **Markdown extensions**, providing you with some nice features.
-
-> **ProTip:** You can disable any **Markdown extension** in the **File properties** dialog.
-
-
-## SmartyPants
-
-SmartyPants converts ASCII punctuation characters into "smart" typographic punctuation HTML entities. For example:
-
-|                |ASCII                          |HTML                         |
-|----------------|-------------------------------|-----------------------------|
-|Single backticks|`'Isn't this fun?'`            |'Isn't this fun?'            |
-|Quotes          |`"Isn't this fun?"`            |"Isn't this fun?"            |
-|Dashes          |`-- is en-dash, --- is em-dash`|-- is en-dash, --- is em-dash|
-
-
-## KaTeX
-
-You can render LaTeX mathematical expressions using [KaTeX](https://khan.github.io/KaTeX/):
-
-The *Gamma function* satisfying $\Gamma(n) = (n-1)!\quad\forall n\in\mathbb N$ is via the Euler integral
-
-$$
-\Gamma(z) = \int_0^\infty t^{z-1}e^{-t}dt\,.
-$$
-
-> You can find more information about **LaTeX** mathematical expressions [here](http://meta.math.stackexchange.com/questions/5020/mathjax-basic-tutorial-and-quick-reference).
-
-
-## UML diagrams
-
-You can render UML diagrams using [Mermaid](https://mermaidjs.github.io/). For example, this will produce a sequence diagram:
-
-```mermaid
-sequenceDiagram
-Alice ->> Bob: Hello Bob, how are you?
-Bob-->>John: How about you John?
-Bob--x Alice: I am good thanks!
-Bob-x John: I am good thanks!
-Note right of John: Bob thinks a long<br/>long time, so long<br/>that the text does<br/>not fit on a row.
-
-Bob-->Alice: Checking with John...
-Alice->John: Yes... John, how are you?
-```
-
-And this will produce a flow chart:
-
-```mermaid
-graph LR
-A[Square Rect] -- Link text --> B((Circle))
-A --> C(Round Rect)
-B --> D{Rhombus}
-C --> D
-```
