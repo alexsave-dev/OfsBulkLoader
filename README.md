@@ -39,7 +39,7 @@ Unzip the file OBL.zip into the directory UD. You should get the picture like th
 
 ![image](https://github.com/alexsave-dev/OfsBulkLoader/assets/65187677/f356d82e-2498-4bba-a397-6fc2a237677a)
 
-Make DBTOOL.USER and DBTOOLS.PASSWORD in OfsBulkLoader.properties as they are on your Transact server:
+Make DBTOOLS.USER and DBTOOLS.PASSWORD in OfsBulkLoader.properties as they are on your Transact server:
 
 ![image](https://github.com/alexsave-dev/OfsBulkLoader/assets/65187677/78861367-68f8-45b3-9fc2-480ae01ed78e)
 
