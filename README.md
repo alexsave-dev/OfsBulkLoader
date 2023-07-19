@@ -13,7 +13,7 @@ Please leave your comments, bug reports and cooperation proposals on alexsave@gm
 
 You can also follow the author on https://www.linkedin.com/in/alexander-savelyev-b8875111/
 # Technical Notes
-The solution has two jar files. **Util_OfsBulkLoader.jar** is deployed on Transact websever, the **OfsBulkLoader.jar** has to be run from the command prompt by the user. Jar files from the pack have been compiled on Java version 1.8.0_301. The solution has been tested on Transact R21 on Windows. All directories mentioned below have to be available for read/write to both jar files. TSA.SERVICE>TSM has to be up and running to allow OFS messages to be posted into Transact.
+The solution has two jar files. **Util_OfsBulkLoader.jar** is deployed on Transact websever, the **OfsBulkLoader.jar** has to be run from the command prompt by the user. Jar files from the pack have been compiled on Java version 1.8.0_301. The solution has been tested on Transact R21 on Windows. All directories mentioned below have to be available for read/write to both jar files. Transact TSA.SERVICE>TSM has to be up and running to allow OFS messages to be posted into Transact.
 
 # Installation
 Deploy the **Util_OfsBulkLoader.jar** on your web server. For example for jBoss the jar file can be copied to the directory with local jars as following:
