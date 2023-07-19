@@ -18,9 +18,10 @@ The solution has two jar files. **Util_OfsBulkLoader.jar** is deployed on Transa
 # Installation
 Deploy the **Util_OfsBulkLoader.jar** on your web server. For example for jBoss the jar file can be copied to the directory with local jars as following:
 
-![image](https://github.com/alexsave-dev/OfsBulkLoader/assets/65187677/4d744bc6-27e1-40ad-a1a2-ed9829fc0660)
+![image](https://github.com/alexsave-dev/OfsBulkLoader/assets/65187677/e0f0d819-8e51-4dab-964a-1a7b3ad184a0)
 
 The resource-root path should be added to module.xml file as following:
+
 ![image](https://github.com/alexsave-dev/OfsBulkLoader/assets/65187677/2a05b3d8-0aab-4c51-94a0-ad6c5638dfb0)
 
 Please restart jBoss afterwards. Please contact your administrator in case of any difficulties. Please follow relevant deployment instructions if you have the webserver of a different provider.  
@@ -35,20 +36,25 @@ Create following three records in Transact:
 **Please assign the relevant user and workload profile for the TSA>BNK/OFS.BULK.LOADER**
 
 Unzip the file OBL.zip into the directory UD. You should get the picture like this:
-![image](https://github.com/alexsave-dev/OfsBulkLoader/assets/65187677/a2df3fe7-37b3-46f6-8acf-a37744219321)
 
-Important note: All settings are already done to run the solution in the directory UD without any extra modificaton. If you decide to copy the pack to different location then please change settings. Settings will be described in the relevant section below.
-That's it. You can construct and post your first OFS to Transact!
+![image](https://github.com/alexsave-dev/OfsBulkLoader/assets/65187677/f356d82e-2498-4bba-a397-6fc2a237677a)
+
+**Important note: All settings are already done to run the solution in the directory UD without any extra modificaton. If you decide to copy the pack to different location then please change settings. Settings will be described in the relevant section below.**
+
+## That's it. You can construct and post your first OFS to Transact!
 
 # Data Preparation
 All instrustion below are given taking into assumption that the solution  is present in the directory OfsBulkLoader in UD. All below mentioned directories have the relevant path from OfsBulkLoader. 
 
-Open the excel file in the directory **./source/test.xlsx**. The file is given as an example. Please feel free to copy and modify it according to your requirements. The spreadsheet **"OFS"** contains OFS message details (highlighted in green) and other user level settings (highlighted in orange) to control the solution. Mandatory fiels are highlighted in red. You'll find explanations and hints in comments to fields on the spreadsheet.
+Open the excel file in the directory **./source/test.xlsx**. The file is given in GIT as an example. Please feel free to copy and modify it according to your requirements. The spreadsheet **"OFS"** contains OFS message details (highlighted in green) and other user level settings (highlighted in orange) to control the solution. Mandatory fiels are highlighted in red. You'll find explanations and hints in comments to fields on the spreadsheet.
 
 Go to the the spreadsheet **"DATA"** to prepare ID values as well as field values to be posted as a part of OFS messages.  
 
 # Execution
 After you are done with xlsx, go to the command prompt in the directory OfsBulkLoader and run the following command to process the xlsx file above: **java -jar ./OfsBulkLoader.jar ./source/test.xlsx**
+
+![image](https://github.com/alexsave-dev/OfsBulkLoader/assets/65187677/b1f2c649-0579-4fd8-adc8-c1ad726a0013)
+
 
 # Results and Logs
 After the execution is over you can check the directory ./log for a log file.
