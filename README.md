@@ -39,7 +39,7 @@ Unzip the file OBL.zip into the directory UD. You should get the picture like th
 
 ![image](https://github.com/alexsave-dev/OfsBulkLoader/assets/65187677/f356d82e-2498-4bba-a397-6fc2a237677a)
 
-**Important note: All settings are already done to run the solution in the directory UD without any extra modificaton. If you decide to copy the pack to different location then please change settings. Settings will be described in the relevant section below.**
+**Important note: All settings are ready to run the solution in the directory UD without any extra modificaton. If you decide to copy the pack to different location then please change settings. Settings will be described in the relevant section below.**
 
 ## That's it. You can construct and post your first OFS to Transact!
 
