@@ -17,10 +17,26 @@ The solution has two jar files. **Util_OfsBulkLoader.jar** is deployed on Transa
 
 # Installation
 Deploy the **Util_OfsBulkLoader.jar** on your web server. For example for jBoss the jar file can be copied to the directory with local jars as following:
+
+![image](https://github.com/alexsave-dev/OfsBulkLoader/assets/65187677/4d744bc6-27e1-40ad-a1a2-ed9829fc0660)
+
 The resource-root path should be added to module.xml file as following:
+![image](https://github.com/alexsave-dev/OfsBulkLoader/assets/65187677/2a05b3d8-0aab-4c51-94a0-ad6c5638dfb0)
+
 Please restart jBoss afterwards. Please contact your administrator in case of any difficulties. Please follow relevant deployment instructions if you have the webserver of a different provider.  
 Create following three records in Transact:
-Unzip the file ... into the directory UD. You should get the picture like this:
+
+![image](https://github.com/alexsave-dev/OfsBulkLoader/assets/65187677/14bad693-85cf-478a-8647-283340adf3d7)
+
+![image](https://github.com/alexsave-dev/OfsBulkLoader/assets/65187677/6c4490be-0b0e-4312-a763-cada6d14a0cd)
+
+![image](https://github.com/alexsave-dev/OfsBulkLoader/assets/65187677/41f33327-1f5d-4db9-b6d3-8e8755909bd0)
+
+**Please assign the relevant user and workload profile for the TSA>BNK/OFS.BULK.LOADER**
+
+Unzip the file OBL.zip into the directory UD. You should get the picture like this:
+![image](https://github.com/alexsave-dev/OfsBulkLoader/assets/65187677/a2df3fe7-37b3-46f6-8acf-a37744219321)
+
 Important note: All settings are already done to run the solution in the directory UD without any extra modificaton. If you decide to copy the pack to different location then please change settings. Settings will be described in the relevant section below.
 That's it. You can construct and post your first OFS to Transact!
 
@@ -44,7 +60,7 @@ There are two fles with settings for the solution.
 The file **Transact_OfsBulkLoader.properties** has to be always placed in the directory UD. The file keeps following default settings for Transact part of the solution:
 |Setting  |Default Value  |Description  |
 |--|--|--|
-|OFS.FILE.PATH|./OfsBulkLoader/ofs/ofs|The path to the ofs file to be processed by Transact if it's required|
+|OFS.FILE.PATH|./OfsBulkLoader/ofs/ofs|The path to the ofs file|
 |LOG.FILE.PATH|./OfsBulkLoader/log/log|The path to the log file|
 |OFS.ARCHIVE.DIR|./OfsBulkLoader/ofs/archive|The path to the archive directory for log files|
 |DELIMITER|^|The technical delimiter used in the ofs file as a separator. **Please don't modify it until you start use ^ as the value in OFS messages**|
@@ -52,7 +68,7 @@ The file **Transact_OfsBulkLoader.properties** has to be always placed in the di
 The file **OfsBulkLoader.properties** has to be always placed in the same directory with OfsBulkLoader.jar. The file keeps following default settings for OfsBulkLoader.jar execution:
 |Setting  |Default Value  |Description  |
 |--|--|--|
-|OFS.FILE.PATH|./ofs/ofs|The path to the ofs file to be processed by Transact if it's required|
+|OFS.FILE.PATH|./ofs/ofs|The path to the ofs file|
 |LOG.FILE.PATH|./log/log|The path to the log file|
 |OFS.ARCHIVE.DIR|./ofs/archive|The path to the archive directory for ofs files|
 |LOG.ARCHIVE.DIR|./log/archive|The path to the archive directory for log files|
