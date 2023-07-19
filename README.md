@@ -39,6 +39,11 @@ Unzip the file OBL.zip into the directory UD. You should get the picture like th
 
 ![image](https://github.com/alexsave-dev/OfsBulkLoader/assets/65187677/f356d82e-2498-4bba-a397-6fc2a237677a)
 
+Make DBTOOL.USER and DBTOOLS.PASSWORD in OfsBulkLoader.properties as they are on your Transact server:
+
+![image](https://github.com/alexsave-dev/OfsBulkLoader/assets/65187677/78861367-68f8-45b3-9fc2-480ae01ed78e)
+
+
 **Important note: All settings are ready to run the solution in the directory UD without any extra modificaton. If you decide to copy the pack to different location then please change settings. Settings will be described in the relevant section below.**
 
 ## That's it. You can construct and post your first OFS to Transact!
@@ -78,8 +83,8 @@ The file **OfsBulkLoader.properties** has to be always placed in the same direct
 |LOG.FILE.PATH|./log/log|The path to the log file|
 |OFS.ARCHIVE.DIR|./ofs/archive|The path to the archive directory for ofs files|
 |LOG.ARCHIVE.DIR|./log/archive|The path to the archive directory for log files|
-|DBTOOLS.USER|DBtools_user|The DBTools username. **Important: please change it to your real DBTools username**|
-|DBTOOLS.PASSWORD|DBtools_password|The DBTools username. **Important: please change it to your real DBTools password**|
+|DBTOOLS.USER|DBTools_user|The DBTools username. **Important: please change it to your real DBTools username**|
+|DBTOOLS.PASSWORD|DBTools_password|The DBTools username. **Important: please change it to your real DBTools password**|
 |DELIMITER|^|The technical delimiter used in the ofs file as a separator. **Please don't modify it until you start use ^ as the value in OFS messages**|
 |CHECK.AGENT.SECONDS.DEFAULT|10|The interval in seconds to check whether the TSA service to post OFS messages into Transact is still running. It can be overriden user interval defined in the spreadsheet.|
 |TSA.SERVICE|BNK/OFS.BULK.LOADER|The name of dedicated TSA.SERVICE to post OFS messages in Transact|
