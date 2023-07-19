@@ -46,7 +46,7 @@ Unzip the file OBL.zip into the directory UD. You should get the picture like th
 # Data Preparation
 All instrustion below are given taking into assumption that the solution  is present in the directory OfsBulkLoader in UD. All below mentioned directories have the relevant path from OfsBulkLoader. 
 
-Open the excel file in the directory **./source/test.xlsx**. The file is given in GIT as an example. Please feel free to copy and modify it according to your requirements. The spreadsheet **"OFS"** contains OFS message details (highlighted in green) and other user level settings (highlighted in orange) to control the solution. Mandatory fiels are highlighted in red. You'll find explanations and hints in comments to fields on the spreadsheet.
+Open the excel file in the directory **./source/test.xlsx**. The file is given in GIT as an example. Please feel free to copy and modify it according to your requirements. The spreadsheet **"OFS"** contains OFS message details (highlighted in green) and other user level settings (highlighted in orange) to control the solution. Mandatory fields are highlighted in red. You'll find explanations and hints in comments to fields on the spreadsheet.
 
 Go to the the spreadsheet **"DATA"** to prepare ID values as well as field values to be posted as a part of OFS messages.  
 
