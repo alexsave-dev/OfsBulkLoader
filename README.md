@@ -28,7 +28,8 @@ After the execution is over you can check the directory ./log for a log file.
 The processed OFS file wil be in the directory ./ofs/archive if the flag POST.TO.TRANSACT=YES in the spresheet. Otherwise the file will be in the directory ./ofs
 
 # Settings
-There are two fles with settings for the solution. The file **Transact_OfsBulkLoader.properties** has to be always placed in the directory UD. The file keeps following default settings for Transact part of the solution:
+There are two fles with settings for the solution. 
+The file **Transact_OfsBulkLoader.properties** has to be always placed in the directory UD. The file keeps following default settings for Transact part of the solution:
 |Setting  |Default Value  |Description  |
 |--|--|--|
 |OFS.FILE.PATH|./OfsBulkLoader/ofs/ofs|The path to the ofs file to be processed by Transact if it's required|
