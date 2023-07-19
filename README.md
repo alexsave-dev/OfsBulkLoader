@@ -1,13 +1,15 @@
 ﻿# About the solution
 The OFS Bulk Loader soluton easily allows generate and post bulk OFS messages into Temenos Transact™/T24™, hereinafter **Transact**.  All OFS settings and details are defined in XLSX file of specific format. Once XLSX file is defined OFS messages can be posted to Transact by running *one and only command* in the command prompt. 
-## The solution is: 
-    Compliant with Transact OFS module 
-    Ready for use 
-    Easy to install
-    Easy to maintain 
-It can be effectively used for Transact data migration projects and for massive postings to Transact by means of OFS. 
+## The solution is:
 
-Please leave your comments, bug reports and cooperation proposals on alexsave@gmail.com. 
+ - Compliant with Transact OFS module  
+ - Ready for use  
+ - Easy to install 
+ -  Easy to maintain.
+
+It can be effectively used for Transact data migration projects and for massive postings to Transact by means of OFS.
+
+Please leave your comments, bug reports and cooperation proposals on alexsave@gmail.com.
 
 You can also follow the author on https://www.linkedin.com/in/alexander-savelyev-b8875111/
 # Technical Notes
