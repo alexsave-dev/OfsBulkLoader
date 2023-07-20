@@ -9,7 +9,7 @@ Prepare the data:
 
 ![image](https://github.com/alexsave-dev/OfsBulkLoader/assets/65187677/ebc5581f-4d8a-48cd-a334-16eeec46b03a)
 
-Run the command: java -jar ./OfsBulkLoader.jar ./source/test.xlsx
+Run the command: **java -jar ./OfsBulkLoader.jar ./source/test.xlsx**
 
 ### Enjoy the result :)
 
