@@ -27,13 +27,13 @@ The resource-root path should be added to module.xml file as following:
 Please restart jBoss afterwards. Please contact your administrator in case of any difficulties. Please follow relevant deployment instructions if you have the webserver of a different provider.  
 Create following three records in Transact:
 
-![image](https://github.com/alexsave-dev/OfsBulkLoader/assets/65187677/14bad693-85cf-478a-8647-283340adf3d7)
+![image](https://github.com/alexsave-dev/OfsBulkLoader/assets/65187677/26f5c04d-dc46-4259-9ad4-7b78fe81150d)
 
-![image](https://github.com/alexsave-dev/OfsBulkLoader/assets/65187677/6c4490be-0b0e-4312-a763-cada6d14a0cd)
+![image](https://github.com/alexsave-dev/OfsBulkLoader/assets/65187677/0e31ded7-747b-4d9e-8087-eb6213a04c7d)
 
-![image](https://github.com/alexsave-dev/OfsBulkLoader/assets/65187677/41f33327-1f5d-4db9-b6d3-8e8755909bd0)
+![image](https://github.com/alexsave-dev/OfsBulkLoader/assets/65187677/b13c69c6-a939-4e75-afd3-320159640214)
 
-**Please assign the relevant user and workload profile for the TSA>BNK/OFS.BULK.LOADER**
+**Please assign the relevant user and workload profile for the TSA.SERVICE>BNK/OFS.BULK.LOADER**
 
 Unzip the file OBL.zip into the directory UD. You should get the picture like this:
 
