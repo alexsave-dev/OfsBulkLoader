@@ -26,7 +26,7 @@ Please leave your comments, bug reports and cooperation proposals on alexsave@gm
 
 You can also follow the author on https://www.linkedin.com/in/alexander-savelyev-b8875111/
 # Technical Notes
-The solution has two jar files. **Util_OfsBulkLoader.jar** is deployed on Transact websever, the **OfsBulkLoader.jar** has to be run from the command prompt by the user. Jar files from the pack have been compiled on Java version 1.8.0_301. The solution has been tested on Transact R21 on Windows 10. All directories mentioned below have to be available for read/write to both jar files. Transact **TSA.SERVICE>TSM** has to be up and running to allow OFS messages to be posted into Transact.
+The solution has two jar files. **Util_OfsBulkLoader.jar** is deployed on Transact websever, the **OfsBulkLoader.jar** has to be run from the command prompt by the user. Jar files from the pack have been compiled on Java version 1.8.0_301. The solution has been tested on Transact R21 on Windows 10. Transact **TSA.SERVICE>TSM** has to be up and running to allow OFS messages to be posted into Transact.
 
 # Installation
 Deploy the **Util_OfsBulkLoader.jar** on your web server. For example for jBoss the jar file can be copied to the directory with local jars as following:
@@ -52,19 +52,15 @@ Unzip the file OBL.zip into the directory UD. You should get the picture like th
 
 ![image](https://github.com/alexsave-dev/OfsBulkLoader/assets/65187677/f356d82e-2498-4bba-a397-6fc2a237677a)
 
-Make DBTOOLS.USER and DBTOOLS.PASSWORD in OfsBulkLoader.properties as they are on your Transact server:
+Modify OfsBulkLoader.properties to make DBTOOLS.USER, DBTOOLS.PASSWORD and TAFJ.HOME as they are on your Transact server:
 
-![image](https://github.com/alexsave-dev/OfsBulkLoader/assets/65187677/78861367-68f8-45b3-9fc2-480ae01ed78e)
+![image](https://github.com/alexsave-dev/OfsBulkLoader/assets/65187677/2de74cb0-a32f-4a96-9be9-19028e77778d)
 
-
-**Important note: All settings are ready to run the solution in the directory UD without any extra modificaton. If you decide to copy the pack to different location then please change settings. Settings will be described in the relevant section below.**
 
 ## That's it. You can construct and post your first OFS to Transact!
 
 # Data Preparation
-All instrustion below are given taking into assumption that the solution  is present in the directory OfsBulkLoader in UD. All below mentioned directories have the relevant path from OfsBulkLoader. 
-
-Open the excel file in the directory **./source/test.xlsx**. The file is given in GIT as an example. Please feel free to copy and modify it according to your requirements. The spreadsheet **"OFS"** contains OFS message details (highlighted in green) and other user level settings (highlighted in orange) to control the solution. Mandatory fields are highlighted in red. You'll find explanations and hints in comments to fields on the spreadsheet.
+Open the excel file in the directory **OfsBulkLoader/source/test.xlsx**. The file is given in GIT as an example. Please feel free to copy and modify it according to your requirements. The spreadsheet **"OFS"** contains OFS message details (highlighted in green) and other user level settings (highlighted in orange) to control the solution. Mandatory fields are highlighted in red. You'll find explanations and hints in comments to fields on the spreadsheet.
 
 Go to the the spreadsheet **"DATA"** to prepare ID values as well as field values to be posted as a part of OFS messages.  
 
@@ -75,31 +71,34 @@ After you are done with xlsx, go to the command prompt in the directory OfsBulkL
 
 
 # Results and Logs
-After the execution is over you can check the directory **./log** for a log file.
+After the execution is over you can check the directory **OfsBulkLoader/log** for a log file.
 
-The processed OFS file will be in the directory **./ofs/archive** if the flag **POST.TO.TRANSACT=YES** in the spreadsheet. Otherwise the file will be in the directory **./ofs**.
+The processed OFS file will be in the directory **OfsBulkLoader/ofs/archive** if the flag **POST.TO.TRANSACT=YES** in the spreadsheet. Otherwise the ready OFS file will in the directory **OfsBulkLoader/ofs** without further processing. 
 
 # Settings
+**Important note: You don't need to change settings if you followed all instructions above and you are happy with existing structure of folders. If you decide to allocate the pack in another location then please change relevant paths**
+
 There are two fles with settings for the solution. 
-The file **Transact_OfsBulkLoader.properties** has to be always placed in the directory UD. The file keeps following default settings for Transact part of the solution:
+The file **Transact_OfsBulkLoader.properties** has to be always placed in the directory UD. The file keeps settings for Transact part of the solution. **The current directory is UD if you define relevant paths for files and directories.**
 |Setting  |Default Value  |Description  |
 |--|--|--|
-|OFS.FILE.PATH|./OfsBulkLoader/ofs/ofs|The path to the ofs file|
-|LOG.FILE.PATH|./OfsBulkLoader/log/log|The path to the log file|
+|OFS.FILE.NAME|./OfsBulkLoader/ofs/ofs|The name of the ofs file|
+|LOG.FILE.NAME|./OfsBulkLoader/log/log|The name of the log file|
 |OFS.ARCHIVE.DIR|./OfsBulkLoader/ofs/archive|The path to the archive directory for log files|
 |DELIMITER|^|The technical delimiter used in the ofs file as a separator. **Please don't modify it until you start use ^ as the value in OFS messages**|
 
-The file **OfsBulkLoader.properties** has to be always placed in the same directory with OfsBulkLoader.jar. The file keeps following default settings for OfsBulkLoader.jar execution:
+The file **OfsBulkLoader.properties** has to be always placed in the same directory with **OfsBulkLoader.jar**. The file keeps settings for **OfsBulkLoader.jar** execution. **The current directory is the directory where the **OfsBulkLoader.jar** is located if you define the relevant path**
 |Setting  |Default Value  |Description  |
 |--|--|--|
-|OFS.FILE.PATH|./ofs/ofs|The path to the ofs file|
-|LOG.FILE.PATH|./log/log|The path to the log file|
+|OFS.FILE.NAME|./ofs/ofs|The name of the ofs file|
+|LOG.FILE.NAME|./log/log|The name of the log file|
 |OFS.ARCHIVE.DIR|./ofs/archive|The path to the archive directory for ofs files|
 |LOG.ARCHIVE.DIR|./log/archive|The path to the archive directory for log files|
-|DBTOOLS.USER|DBTools_user|The DBTools username. **Important: please change it to your real DBTools username**|
-|DBTOOLS.PASSWORD|DBTools_password|The DBTools username. **Important: please change it to your real DBTools password**|
+|TAFJ.HOME|./log/archive|The path to TAFJ directory. **Important: please change it to the location of TAFJ folder on your server before first run**|
+|DBTOOLS.USER|youruser|The DBTools username. **Important: please change it to your real DBTools username before first run**|
+|DBTOOLS.PASSWORD|Pa!12345678|The DBTools username. **Important: please change it to your real DBTools password before first run**|
 |DELIMITER|^|The technical delimiter used in the ofs file as a separator. **Please don't modify it until you start use ^ as the value in OFS messages**|
-|CHECK.AGENT.SECONDS.DEFAULT|10|The interval in seconds to check whether the TSA service to post OFS messages into Transact is still running. It can be overriden user interval defined in the spreadsheet.|
+|CHECK.AGENT.SECONDS.DEFAULT|10|The interval in seconds to check whether the TSA service to post OFS messages into Transact is still running. It can be overriden by user interval defined in the spreadsheet.|
 |TSA.SERVICE|BNK/OFS.BULK.LOADER|The name of dedicated TSA.SERVICE to post OFS messages in Transact|
 # Disclaimer
 The following disclaimer outlines the terms and conditions governing the use of our solution. By using our solution, you acknowledge and agree to the terms stated below:
