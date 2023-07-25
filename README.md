@@ -77,7 +77,7 @@ After the execution is over you can check the directory **OfsBulkLoader/log** fo
 The processed OFS file will be in the directory **OfsBulkLoader/ofs/archive** if the flag **POST.TO.TRANSACT=YES** in the spreadsheet. Otherwise the ready OFS file will in the directory **OfsBulkLoader/ofs** without further processing. 
 
 # Settings
-**Important note: You don't need to change settings if you followed all instructions above and you are happy with existing structure of folders. If you decide to allocate the pack in another location then please change relevant paths**
+**Important note: You don't need to change settings if you followed all instructions above and you are happy with existing structure of folders and other settings. If you decide to allocate the pack in another location then please change relevant paths.**
 
 There are two fles with settings for the solution. 
 The file **Transact_OfsBulkLoader.properties** has to be always placed in the directory UD. The file keeps settings for Transact part of the solution. **The current directory is UD if you define relevant paths for files and directories.**
