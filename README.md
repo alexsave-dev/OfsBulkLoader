@@ -54,7 +54,8 @@ Unzip the file OBL.zip into the directory UD. You should get the picture like th
 
 Modify OfsBulkLoader.properties to make DBTOOLS.USER, DBTOOLS.PASSWORD and TAFJ.HOME as they are on your Transact server:
 
-![image](https://github.com/alexsave-dev/OfsBulkLoader/assets/65187677/2de74cb0-a32f-4a96-9be9-19028e77778d)
+![image](https://github.com/alexsave-dev/OfsBulkLoader/assets/65187677/59dfcb4e-43bf-4042-a593-fd6a28f0fd20)
+
 
 
 ## That's it. You can construct and post your first OFS to Transact!
