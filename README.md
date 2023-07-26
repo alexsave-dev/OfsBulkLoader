@@ -88,7 +88,7 @@ The file **Transact_OfsBulkLoader.properties** has to be always placed in the di
 |OFS.ARCHIVE.DIR|./OfsBulkLoader/ofs/archive|The path to the archive directory for log files|
 |DELIMITER|^|The technical delimiter used in the ofs file as a separator. **Please don't modify it until you start use ^ as the value in OFS messages**|
 
-The file **OfsBulkLoader.properties** has to be always placed in the same directory with **OfsBulkLoader.jar**. The file keeps settings for **OfsBulkLoader.jar** execution. **The current directory is the directory where the **OfsBulkLoader.jar** is located if you define the relative path**
+The file **OfsBulkLoader.properties** has to be always placed in the same directory with **OfsBulkLoader.jar**. The file keeps settings for **OfsBulkLoader.jar** execution. **The current directory is the directory where the **OfsBulkLoader.jar** is located if you define relative paths for files and directories.**
 |Setting  |Default Value  |Description  |
 |--|--|--|
 |OFS.FILE.NAME|./ofs/ofs|The name of the ofs file|
