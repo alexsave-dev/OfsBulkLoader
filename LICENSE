@@ -1,13 +1,24 @@
-                      BSD Zero Clause License
-
 Copyright (C) 2023 by Alexander Savelyev <alexsave@gmail.com>
 
-Permission to use, copy, modify, and/or distribute this software for any purpose with 
-or without fee is hereby granted.
+Permission to use, copy, and/or distribute this software for any purpose with or without fee is hereby granted. The author of this software should always be mentioned in the license of other software if this software if fully or particially present in another software or solution.
 
-THE SOFTWARE IS PROVIDED "AS IS" AND THE AUTHOR DISCLAIMS ALL WARRANTIES WITH REGARD TO 
-THIS SOFTWARE INCLUDING ALL IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS. IN NO EVENT 
-SHALL THE AUTHOR BE LIABLE FOR ANY SPECIAL, DIRECT, INDIRECT, OR CONSEQUENTIAL DAMAGES OR 
-ANY DAMAGES WHATSOEVER RESULTING FROM LOSS OF USE, DATA OR PROFITS, WHETHER IN AN ACTION OF 
-CONTRACT, NEGLIGENCE OR OTHER TORTIOUS ACTION, ARISING OUT OF OR IN CONNECTION WITH THE USE 
-OR PERFORMANCE OF THIS SOFTWARE.
+DISCLAIMER
+The following disclaimer outlines the terms and conditions governing the use of our solution. By using our solution, you acknowledge and agree to the terms stated below:
+
+Limited Responsibility: Our company shall not be held responsible for any damage, loss, or liability incurred by the client's systems or data arising from the use of our solution. We provide the solution on an "as is" basis, without any warranties or guarantees.
+
+Third-Party Dependencies: Our solution may rely on third-party components, software, or services. We do not guarantee the performance, reliability, or compatibility of these third-party elements, and we shall not be responsible for any issues caused by them.
+
+User Responsibilities: The client is solely responsible for the proper use, configuration, and maintenance of their systems. It is the client's responsibility to ensure the compatibility of our solution with their existing infrastructure, networks, and software.
+
+Limitation of Liability: In no event shall our company or its employees, contractors, or affiliates be liable for any indirect, incidental, special, or consequential damages arising from the use of our solution, even if advised of the possibility of such damages.
+
+Security and Data Protection: While we take reasonable measures to secure our solution, we do not guarantee the absolute security of client systems or data. The client is responsible for implementing appropriate security measures to protect their systems and data.
+
+Support and Maintenance: Our company may provide support and maintenance services for our solution, but we do not guarantee the availability or timeliness of such services. Any support or maintenance provided is subject to separate agreements and terms.
+
+Modifications and Updates: We reserve the right to modify, update, or discontinue our solution at any time without prior notice. We shall not be liable for any damages or losses resulting from such modifications or discontinuation.
+
+Compliance with Laws: The client is responsible for ensuring that their use of our solution complies with all applicable laws, regulations, and industry standards. Our company shall not be liable for any violations or legal issues arising from the client's use of our solution.
+
+By using our solution, you agree to indemnify, defend, and hold harmless our company and its employees, contractors, and affiliates from any claims, liabilities, damages, or expenses arising from your use of our solution in violation of these terms.
