@@ -101,26 +101,3 @@ The file **OfsBulkLoader.properties** has to be always placed in the same direct
 |DELIMITER|^|The technical delimiter used in the ofs file as a separator. **Please don't modify it until you start use ^ as the value in OFS messages**|
 |CHECK.AGENT.SECONDS.DEFAULT|10|The interval in seconds to check whether the TSA service to post OFS messages into Transact is still running. It can be overriden by user interval defined in the spreadsheet.|
 |TSA.SERVICE|BNK/OFS.BULK.LOADER|The name of dedicated TSA.SERVICE to post OFS messages in Transact|
-# Disclaimer
-The following disclaimer outlines the terms and conditions governing the use of our solution. By using our solution, you acknowledge and agree to the terms stated below:
-
-1.  Limited Responsibility: Our company shall not be held responsible for any damage, loss, or liability incurred by the client's systems or data arising from the use of our solution. We provide the solution on an "as is" basis, without any warranties or guarantees.
-    
-2.  Third-Party Dependencies: Our solution may rely on third-party components, software, or services. We do not guarantee the performance, reliability, or compatibility of these third-party elements, and we shall not be responsible for any issues caused by them.
-    
-3.  User Responsibilities: The client is solely responsible for the proper use, configuration, and maintenance of their systems. It is the client's responsibility to ensure the compatibility of our solution with their existing infrastructure, networks, and software.
-    
-4.  Limitation of Liability: In no event shall our company or its employees, contractors, or affiliates be liable for any indirect, incidental, special, or consequential damages arising from the use of our solution, even if advised of the possibility of such damages.
-    
-5.  Security and Data Protection: While we take reasonable measures to secure our solution, we do not guarantee the absolute security of client systems or data. The client is responsible for implementing appropriate security measures to protect their systems and data.
-    
-6.  Support and Maintenance: Our company may provide support and maintenance services for our solution, but we do not guarantee the availability or timeliness of such services. Any support or maintenance provided is subject to separate agreements and terms.
-    
-7.  Modifications and Updates: We reserve the right to modify, update, or discontinue our solution at any time without prior notice. We shall not be liable for any damages or losses resulting from such modifications or discontinuation.
-    
-8.  Compliance with Laws: The client is responsible for ensuring that their use of our solution complies with all applicable laws, regulations, and industry standards. Our company shall not be liable for any violations or legal issues arising from the client's use of our solution.
-
-By using our solution, you agree to indemnify, defend, and hold harmless our company and its employees, contractors, and affiliates from any claims, liabilities, damages, or expenses arising from your use of our solution in violation of these terms.
-
-
-
