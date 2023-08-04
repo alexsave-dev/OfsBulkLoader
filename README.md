@@ -66,7 +66,7 @@ Open the excel file in the directory **OfsBulkLoader/source/test.xlsx**. The fil
 Go to the the spreadsheet **"DATA"** to prepare ID values as well as field values to be posted as a part of OFS messages.  
 
 # Execution
-After you are done with xlsx, go to the command prompt in the directory OfsBulkLoader and run the following command to process the xlsx file above: **java -jar ./OfsBulkLoader.jar ./source/test.xlsx**
+After you are done with xlsx, go to the command prompt in the directory OfsBulkLoader and run the following command to process the specific xlsx file (the name of the xlsx file should be provided as a parameter): **java -jar ./OfsBulkLoader.jar ./source/your_file_name.xlsx**.   
 
 ![image](https://github.com/alexsave-dev/OfsBulkLoader/assets/65187677/b1f2c649-0579-4fd8-adc8-c1ad726a0013)
 
