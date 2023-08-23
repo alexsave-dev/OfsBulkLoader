@@ -52,6 +52,8 @@ Unzip the file OBL.zip into the directory UD. You should get the picture like th
 
 ![image](https://github.com/alexsave-dev/OfsBulkLoader/assets/65187677/f356d82e-2498-4bba-a397-6fc2a237677a)
 
+**Important. The file OfsBulkLoader.properties has to be always placed in the same directory with OfsBulkLoader.jar. The file keeps settings for OfsBulkLoader.jar execution. The current directory is the directory where the OfsBulkLoader.jar is located if you define relative paths for files and directories.**
+
 Modify OfsBulkLoader.properties to make DBTOOLS.USER, DBTOOLS.PASSWORD and TAFJ.HOME as they are on your Transact server:
 
 ![image](https://github.com/alexsave-dev/OfsBulkLoader/assets/65187677/59dfcb4e-43bf-4042-a593-fd6a28f0fd20)
