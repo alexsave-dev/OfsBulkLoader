@@ -61,19 +61,8 @@ Unzip the file OBL.zip into the directory UD. You should get the picture like th
 **Important. The file OfsBulkLoader.properties has to be always placed in the same directory with OfsBulkLoader.jar. The file keeps settings for OfsBulkLoader.jar execution. The current directory is the directory where the OfsBulkLoader.jar is located if you define relative paths for files and directories.**
 
 Modify OfsBulkLoader.properties to setup the path to TAFJ directory in TAFJ.HOME:
-OFS.FILE.NAME=./ofs/ofs
-LOG.FILE.NAME=./log/log
-OFS.ARCHIVE.DIR=./ofs/archive
-LOG.ARCHIVE.DIR=./log/archive
-**TAFJ.HOME=../../TAFJ**
-DELIMITER=^
-CHECK.AGENT.SECONDS.DEFAULT=10
-TSA.SERVICE=BNK/OFS.BULK.LOADER
-DEBUG=FALSE
-JDBC.URL.OVERRIDE=
-FM.DELIMITER=\uF8FE
 
-![image](https://github.com/alexsave-dev/OfsBulkLoader/assets/65187677/59dfcb4e-43bf-4042-a593-fd6a28f0fd20)
+![prop](https://github.com/alexsave-dev/OfsBulkLoader/assets/65187677/257199a7-1fe9-4255-a6c7-638b520121c0)
 
 
 
@@ -115,8 +104,10 @@ The file **OfsBulkLoader.properties** has to be always placed in the same direct
 |OFS.ARCHIVE.DIR|./ofs/archive|The path to the archive directory for ofs files|
 |LOG.ARCHIVE.DIR|./log/archive|The path to the archive directory for log files|
 |TAFJ.HOME|./log/archive|The path to TAFJ directory. **Important: please change it to the location of TAFJ folder on your server before first run**|
-|DBTOOLS.USER|youruser|The DBTools username. **Important: please change it to your real DBTools username before first run**|
-|DBTOOLS.PASSWORD|Pa!12345678|The DBTools username. **Important: please change it to your real DBTools password before first run**|
 |DELIMITER|^|The technical delimiter used in the ofs file as a separator. **Please don't modify it until you start use ^ as the value in OFS messages**|
 |CHECK.AGENT.SECONDS.DEFAULT|10|The interval in seconds to check whether the TSA service to post OFS messages into Transact is still running. It can be overriden by user interval defined in the spreadsheet.|
 |TSA.SERVICE|BNK/OFS.BULK.LOADER|The name of dedicated TSA.SERVICE to post OFS messages in Transact|
+|DEBUG|FALSE|Please set the parameter to TRUE in case if extra details have to be provided for technical support|
+|JDBC.URL.OVERRIDE||By default JDBC Url is taken from the relevant properties file in TAFJ/conf directory. If this setting is assigned then it overrides the default JDBC Url value|
+|FM.DELIMITER|\uF8FE|Please keep this value unchanged unless you get other instructions from technical support |
+
