@@ -108,6 +108,6 @@ The file **OfsBulkLoader.properties** has to be always placed in the same direct
 |CHECK.AGENT.SECONDS.DEFAULT|10|The interval in seconds to check whether the TSA service to post OFS messages into Transact is still running. It can be overriden by user interval defined in the spreadsheet.|
 |TSA.SERVICE|BNK/OFS.BULK.LOADER|The name of dedicated TSA.SERVICE to post OFS messages in Transact|
 |DEBUG|FALSE|Please set the parameter to TRUE in case if extra details have to be provided for technical support|
-|JDBC.URL.OVERRIDE||By default JDBC Url is taken from the relevant properties file in TAFJ/conf directory. If this setting is assigned then it overrides the default JDBC Url value|
+|JDBC.URL.OVERRIDE||By default JDBC Url is taken from the relevant properties file in TAFJ/conf directory. If this setting is assigned then it overrides the default JDBC Url value. Usually this value is changed if additional connections options have to be given together with JDBC Url from TAFJ properties|
 |FM.DELIMITER|\uF8FE|Please keep this value unchanged unless you get other instructions from technical support |
 
