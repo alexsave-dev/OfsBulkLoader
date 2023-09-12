@@ -40,9 +40,10 @@ CREATE-FILE F.OFS.BULK.LOADER.IDS 3 4
 ![dbtools](https://github.com/alexsave-dev/OfsBulkLoader/assets/65187677/a51d5c05-90c1-4d67-ad7e-d52e2f9ae22f)
 
 Find the required release here: https://github.com/alexsave-dev/OfsBulkLoader/releases. The current Readme file stands for the most up-to-date release. Previous Readme files are put inside relevant release packs. 
-Unzip the file OBL.zip into the directory UD. You should get the picture like this:
+Unzip the file OfsBulkLoader.zip into the directory UD. You should get the picture like this:
 
-![image](https://github.com/alexsave-dev/OfsBulkLoader/assets/65187677/f356d82e-2498-4bba-a397-6fc2a237677a)
+![image](https://github.com/alexsave-dev/OfsBulkLoader/assets/65187677/b25548a3-7cc8-4f03-8ded-bc734a188e96)
+
 
 **Important. The file OfsBulkLoader.properties has to be always placed in the same directory with OfsBulkLoader.jar. The file keeps settings for OfsBulkLoader.jar execution. The current directory is the directory where the OfsBulkLoader.jar is located if you define relative paths for files and directories.**
 
