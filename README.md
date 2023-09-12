@@ -75,15 +75,6 @@ The processed OFS file will be in the directory **OfsBulkLoader/ofs/archive** if
 # Settings
 **Important note: You don't need to change settings if you followed all instructions above and you are happy with existing structure of folders and other settings. If you decide to allocate the pack in another location then please change relevant paths.**
 
-There are two fles with settings for the solution. 
-The file **Transact_OfsBulkLoader.properties** has to be always placed in the directory UD. The file keeps settings for Transact part of the solution. **The current directory is UD if you define relative paths for files and directories.**
-|Setting  |Default Value  |Description  |
-|--|--|--|
-|OFS.FILE.NAME|./OfsBulkLoader/ofs/ofs|The name of the ofs file|
-|LOG.FILE.NAME|./OfsBulkLoader/log/log|The name of the log file|
-|OFS.ARCHIVE.DIR|./OfsBulkLoader/ofs/archive|The path to the archive directory for log files|
-|DELIMITER|^|The technical delimiter used in the ofs file as a separator. **Please don't modify it until you start use ^ as the value in OFS messages**|
-
 The file **OfsBulkLoader.properties** has to be always placed in the same directory with **OfsBulkLoader.jar**. The file keeps settings for **OfsBulkLoader.jar** execution. **The current directory is the directory where the **OfsBulkLoader.jar** is located if you define relative paths for files and directories.**
 |Setting  |Default Value  |Description  |
 |--|--|--|
