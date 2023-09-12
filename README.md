@@ -26,7 +26,7 @@ Please leave your comments, bug reports and cooperation proposals on alexsave@gm
 
 You can also follow the author on https://www.linkedin.com/in/alexander-savelyev-b8875111/
 # Technical Notes
-The solution has one jar file **OfsBulkLoader.jar** which has to be run from the command prompt by the user. Jar files from the pack have been compiled on Java version 1.8.0_301. The solution has been tested on following environments: 
+The solution has one jar file **OfsBulkLoader.jar** which has to be run from the command prompt by the user. The jar file has been compiled on Java version 1.8.0_301. The solution has been tested on following environments: 
 - Transact R21, Windows 10, H2 database
 - Transact R23, openSUSE Leap 15.5, MSSQL database 
 
