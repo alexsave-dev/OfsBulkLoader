@@ -48,7 +48,8 @@ Unzip the file OBL.zip into the directory UD. You should get the picture like th
 
 Modify OfsBulkLoader.properties to setup the path to TAFJ directory in TAFJ.HOME:
 
-![image](https://github.com/alexsave-dev/OfsBulkLoader/assets/65187677/162efc09-f5ed-49d6-92b4-4a11b9cc450b)
+![image](https://github.com/alexsave-dev/OfsBulkLoader/assets/65187677/fab36c29-b17f-4158-a089-b80d1f452d11)
+
 
 
 
