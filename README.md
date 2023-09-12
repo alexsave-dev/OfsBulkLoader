@@ -18,7 +18,7 @@ Run the command: **java -jar ./OfsBulkLoader.jar ./source/test.xlsx**
  - Compliant with Transact OFS module  
  - Ready for use  
  - Easy to install 
- -  Easy to maintain.
+ - Easy to maintain.
 
 It can be effectively used for Transact data migration projects and for massive postings to Transact by means of OFS.
 
@@ -49,10 +49,7 @@ Unzip the file OfsBulkLoader.zip into the directory UD. You should get the pictu
 
 Modify OfsBulkLoader.properties to setup the path to TAFJ directory in TAFJ.HOME:
 
-![image](https://github.com/alexsave-dev/OfsBulkLoader/assets/65187677/fab36c29-b17f-4158-a089-b80d1f452d11)
-
-
-
+![image](https://github.com/alexsave-dev/OfsBulkLoader/assets/65187677/cb6c1bf7-91b6-4eeb-9824-dcb0f04eb208)
 
 
 ## That's it. You can construct and post your first OFS to Transact!
@@ -84,7 +81,6 @@ The file **OfsBulkLoader.properties** has to be always placed in the same direct
 |OFS.ARCHIVE.DIR|./ofs/archive|The path to the archive directory for ofs files|
 |LOG.ARCHIVE.DIR|./log/archive|The path to the archive directory for log files|
 |TAFJ.HOME|./log/archive|The path to TAFJ directory. **Important: please change it to the location of TAFJ folder on your server before first run**|
-|DELIMITER|^|The technical delimiter used in the ofs file as a separator. **Please don't modify it until you start use ^ as the value in OFS messages**|
 |CHECK.AGENT.SECONDS.DEFAULT|10|The interval in seconds to check whether the TSA service to post OFS messages into Transact is still running. It can be overriden by user interval defined in the spreadsheet.|
 |DEBUG|FALSE|Please set the parameter to TRUE in case if extra details have to be provided for technical support|
 |JDBC.URL.OVERRIDE||By default JDBC Url is taken from the relevant properties file in TAFJ/conf directory. If this setting is assigned then it overrides the default JDBC Url value. Usually this value is changed if additional connections options have to be given together with JDBC Url from TAFJ properties|
