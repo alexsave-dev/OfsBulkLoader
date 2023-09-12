@@ -26,34 +26,20 @@ Please leave your comments, bug reports and cooperation proposals on alexsave@gm
 
 You can also follow the author on https://www.linkedin.com/in/alexander-savelyev-b8875111/
 # Technical Notes
-The solution has two jar files. **Util_OfsBulkLoader.jar** is deployed on Transact websever, the **OfsBulkLoader.jar** has to be run from the command prompt by the user. Jar files from the pack have been compiled on Java version 1.8.0_301. The solution has been tested on following environments: 
+The solution has one jar file **OfsBulkLoader.jar** which has to be run from the command prompt by the user. Jar files from the pack have been compiled on Java version 1.8.0_301. The solution has been tested on following environments: 
 - Transact R21, Windows 10, H2 database
 - Transact R23, openSUSE Leap 15.5, MSSQL database 
 
-The solution is compatible with Temenos Transact TAFJ environments on H2, MSSQL and Oracle databases. 
+The solution is compatible with Temenos Transact TAFJ environments on H2 and MSSQL databases. 
 
-Prerequisite. Transact **TSA.SERVICE>TSM** has to be up and running to allow OFS messages to be posted into Transact.
+Prerequisite. Both Transact TSA.SERVICE's **TSM** and **OFS.MESSAGE.SERVICE** in any company have to be up and running to allow OFS messages to be posted into Transact.
 
 # Installation
-Find the required release here: https://github.com/alexsave-dev/OfsBulkLoader/releases. The current Readme file stands for the most up-to-date release. Previous Readme files are put inside relevant release packs. Deploy the **Util_OfsBulkLoader.jar** on your web server. For example for jBoss the jar file can be copied to the directory with local jars as following:
+Create the file F.OFS.BULK.LOADER.IDS by following command in DBTools in JQL mode:
+CREATE-FILE F.OFS.BULK.LOADER.IDS 3 4
+![dbtools](https://github.com/alexsave-dev/OfsBulkLoader/assets/65187677/a51d5c05-90c1-4d67-ad7e-d52e2f9ae22f)
 
-![image](https://github.com/alexsave-dev/OfsBulkLoader/assets/65187677/e0f0d819-8e51-4dab-964a-1a7b3ad184a0)
-
-The resource-root path should be added to module.xml file as following:
-
-![image](https://github.com/alexsave-dev/OfsBulkLoader/assets/65187677/2a05b3d8-0aab-4c51-94a0-ad6c5638dfb0)
-
-Please restart jBoss afterwards. Please contact your administrator in case of any difficulties. Please follow relevant deployment instructions if you have the webserver of a different provider.  
-Create following three records in Transact:
-
-![image](https://github.com/alexsave-dev/OfsBulkLoader/assets/65187677/26f5c04d-dc46-4259-9ad4-7b78fe81150d)
-
-![image](https://github.com/alexsave-dev/OfsBulkLoader/assets/65187677/0e31ded7-747b-4d9e-8087-eb6213a04c7d)
-
-![image](https://github.com/alexsave-dev/OfsBulkLoader/assets/65187677/b13c69c6-a939-4e75-afd3-320159640214)
-
-**Please assign the relevant user and workload profile for the TSA.SERVICE>BNK/OFS.BULK.LOADER**
-
+Find the required release here: https://github.com/alexsave-dev/OfsBulkLoader/releases. The current Readme file stands for the most up-to-date release. Previous Readme files are put inside relevant release packs. 
 Unzip the file OBL.zip into the directory UD. You should get the picture like this:
 
 ![image](https://github.com/alexsave-dev/OfsBulkLoader/assets/65187677/f356d82e-2498-4bba-a397-6fc2a237677a)
@@ -62,7 +48,8 @@ Unzip the file OBL.zip into the directory UD. You should get the picture like th
 
 Modify OfsBulkLoader.properties to setup the path to TAFJ directory in TAFJ.HOME:
 
-![prop](https://github.com/alexsave-dev/OfsBulkLoader/assets/65187677/257199a7-1fe9-4255-a6c7-638b520121c0)
+![image](https://github.com/alexsave-dev/OfsBulkLoader/assets/65187677/162efc09-f5ed-49d6-92b4-4a11b9cc450b)
+
 
 
 
@@ -106,7 +93,6 @@ The file **OfsBulkLoader.properties** has to be always placed in the same direct
 |TAFJ.HOME|./log/archive|The path to TAFJ directory. **Important: please change it to the location of TAFJ folder on your server before first run**|
 |DELIMITER|^|The technical delimiter used in the ofs file as a separator. **Please don't modify it until you start use ^ as the value in OFS messages**|
 |CHECK.AGENT.SECONDS.DEFAULT|10|The interval in seconds to check whether the TSA service to post OFS messages into Transact is still running. It can be overriden by user interval defined in the spreadsheet.|
-|TSA.SERVICE|BNK/OFS.BULK.LOADER|The name of dedicated TSA.SERVICE to post OFS messages in Transact|
 |DEBUG|FALSE|Please set the parameter to TRUE in case if extra details have to be provided for technical support|
 |JDBC.URL.OVERRIDE||By default JDBC Url is taken from the relevant properties file in TAFJ/conf directory. If this setting is assigned then it overrides the default JDBC Url value. Usually this value is changed if additional connections options have to be given together with JDBC Url from TAFJ properties|
 |FM.DELIMITER|\uF8FE|Please keep this value unchanged unless you get other instructions from technical support |
