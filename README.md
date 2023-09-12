@@ -69,7 +69,7 @@ After you are done with xlsx, go to the command prompt in the directory OfsBulkL
 # Results and Logs
 After the execution is over you can check the directory **OfsBulkLoader/log** for a log file.
 
-The processed OFS file will be in the directory **OfsBulkLoader/ofs/archive** if the flag **POST.TO.TRANSACT=YES** in the spreadsheet. Otherwise the ready OFS file will in the directory **OfsBulkLoader/ofs** without further processing. 
+The processed OFS file will be in the directory **OfsBulkLoader/ofs/archive** if the flag **POST.TO.TRANSACT=YES** in the spreadsheet. Otherwise the ready OFS file will be in the directory **OfsBulkLoader/ofs** without further processing. 
 
 # Settings
 **Important note: You don't need to change settings if you followed all instructions above and you are happy with existing structure of folders and other settings. If you decide to allocate the pack in another location then please change relevant paths.**
