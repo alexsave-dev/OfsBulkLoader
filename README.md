@@ -88,7 +88,7 @@ The file **OfsBulkLoader.properties** has to be always placed in the same direct
 |LOG.FILE.NAME|./log/log|The name of the log file|
 |OFS.ARCHIVE.DIR|./ofs/archive|The path to the archive directory for ofs files|
 |LOG.ARCHIVE.DIR|./log/archive|The path to the archive directory for log files|
-|TAFJ.HOME|./log/archive|The path to TAFJ directory. **Important: please change it to the location of TAFJ folder on your server before first run**|
+|TAFJ.HOME|../../TAFJ|The path to TAFJ directory. **Important: please change it to the location of TAFJ folder on your server before first run**|
 |CHECK.AGENT.SECONDS.DEFAULT|10|The interval in seconds to check whether the TSA service to post OFS messages into Transact is still running. It can be overriden by user interval defined in the spreadsheet.|
 |DEBUG|FALSE|Please set the parameter to TRUE in case if extra details have to be provided for technical support|
 |JDBC.URL.OVERRIDE||By default JDBC Url is taken from the relevant properties file in TAFJ/conf directory. If this setting is assigned then it overrides the default JDBC Url value. Usually this value is changed if additional connections options have to be given together with JDBC Url from TAFJ properties|
