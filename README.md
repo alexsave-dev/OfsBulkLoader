@@ -26,7 +26,7 @@ Please leave your comments, bug reports and cooperation proposals on alexsave@gm
 
 You can also follow the author on https://www.linkedin.com/in/alexander-savelyev-b8875111/
 
-## Gratitudes:
+# Gratitudes:
 I'd like to gratitude everybody who made the input into my project!
 Special thanks to:
  - Peter Vengher (https://www.linkedin.com/in/peter-vengher-41b07a10/), for his ideas and support in testing.   
