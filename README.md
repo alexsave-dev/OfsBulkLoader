@@ -31,7 +31,7 @@ I'd like to gratitude everybody who made the input into my project!
 Special thanks to:
  - Peter Vengher (https://www.linkedin.com/in/peter-vengher-41b07a10/), for his ideas and support in testing.   
  - Rafiq Qarakishiyev (https://www.linkedin.com/in/rafiq-qarakishiyev-337a98110/), for support in testing.
- - My son Aleksei Savelyev (https://www.linkedin.com/in/aleksei-savelyev-941165192/), for technical support 
+ - My son Aleksei Savelyev (https://www.linkedin.com/in/aleksei-savelyev-941165192/), for technical support. 
 
 # Technical Notes
 The solution has one jar file **OfsBulkLoader.jar** which has to be run from the command prompt by the user. The jar file has been compiled on Java version 1.8.0_301. The solution has been tested on following environments: 
