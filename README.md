@@ -39,7 +39,7 @@ The solution has one jar file **OfsBulkLoader.jar** which has to be run from the
 - Transact R23, openSUSE Leap 15.5, MSSQL database
 - Transact R23, openSUSE Leap 15.5, PostgreSQL database in JSON mode 
 
-The solution is compatible with Temenos Transact TAFJ environments on H2 and MSSQL databases. 
+The solution is compatible with Temenos Transact TAFJ environments on H2, MSSQL and PostgreSQL databases. 
 
 Prerequisite. Both Transact TSA.SERVICE's **TSM** and **OFS.MESSAGE.SERVICE** in any company have to be up and running to allow OFS messages to be posted into Transact.
 
